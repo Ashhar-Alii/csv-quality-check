@@ -18,6 +18,10 @@ clean-targets:
   - "target"
   - "dbt_packages"
 
+# Add it here as a top-level block
+on-run-end:
+  - "{{ save_test_results() }}"
+
 # Change this to match the Unity Catalog Volume where Kestra's
 # databricks.dbfs.Upload task lands the CSV.
 vars:
