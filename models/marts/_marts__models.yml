@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: orders
+    description: >
+      Production orders table that BI dashboards query. Only ever contains
+      rows that passed every stg_orders test -- dbt build skips this model
+      entirely if an upstream test on stg_orders fails, so bad CSV data
+      never silently lands here.
+    columns:
+      - name: order_id
+        tests:
+          - unique
+          - not_null

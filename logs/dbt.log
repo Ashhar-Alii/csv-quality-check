@@ -1,0 +1,13 @@
+[0m23:46:16.081377 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DB3982F6B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DB3C306E10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DB3C304B30>]}
+
+
+============================== 23:46:16.112595 | 541b47e6-9e22-47e5-a359-e5cb6bb9d331 ==============================
+[0m23:46:16.112595 [info ] [MainThread]: Running with dbt=1.12.5
+[0m23:46:16.113606 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'maximum_seed_size_mib': '1', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\HP\\.dbt', 'invocation_command': 'dbt ', 'hints_enabled': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'log_path': 'c:\\csv_quality_gate\\logs'}
+[0m23:46:16.546139 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '541b47e6-9e22-47e5-a359-e5cb6bb9d331', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DB3E134B00>]}
+[0m23:46:16.633112 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m23:46:16.634118 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m23:46:16.635119 [debug] [MainThread]: Command `cli deps` succeeded at 23:46:16.635119 after 0.80 seconds
+[0m23:46:16.636118 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DB3982F6B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DB3E1E86B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DB3E1E8620>]}
+[0m23:46:16.636118 [debug] [MainThread]: Flushing usage events
+[0m23:46:18.259357 [debug] [MainThread]: An error was encountered while trying to flush usage events

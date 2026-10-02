@@ -1,0 +1,33 @@
+name: 'csv_quality_gate'
+version: '1.0.0'
+config-version: 2
+
+# Databricks' native dbt job task auto-generates the profiles.yml entry for
+# you at runtime from the warehouseId/catalog/schema you set in the Kestra
+# flow's DbtTaskSetting block, matching whatever profile name is declared
+# here. You do NOT need to commit a profiles.yml to this repo.
+profile: 'csv_quality_gate'
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+test-paths: ["tests"]
+macro-paths: ["macros"]
+
+target-path: "target"
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+# Change this to match the Unity Catalog Volume where Kestra's
+# databricks.dbfs.Upload task lands the CSV.
+vars:
+  landing_volume_path: "/Volumes/workspace/staging/raw_landing_volume"
+
+models:
+  csv_quality_gate:
+    staging:
+      +materialized: view
+      +schema: staging
+    marts:
+      +materialized: incremental
+      +schema: analytics
